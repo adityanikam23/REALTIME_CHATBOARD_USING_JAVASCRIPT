@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REAL TIME CHAT BOARD</title>
+    <style>
+        *{
+            text-transform: capitalize;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: aquamarine;
+        }
+        h1{
+            text-align: center;
+        }
+        .maindiv{
+            /* border: 1px solid black; */
+            height: 584px;
+            width: 368px;
+            margin: auto;
+            position: relative;
+            background-color: azure;
+            color: black;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 10px;
+        }
+        .name{
+            /* border: 2px solid black; */
+            height: 50px;
+            background-color: green;
+            /* color: white; */
+            border-radius: 10px;
+        }
+        .name img{
+            padding-left: 5px;
+            padding-top: 5px;
+            border-radius: 50%;
+        }
+        .name span{
+            font-size: large;
+            padding-left: 10px;
+            position: absolute;
+            top: 15px;
+            color: white;
+            font-weight: bold;
+        }
+        .videocall{
+            position: absolute;
+            right: 70px;
+        }
+        .callingimg{
+            position: absolute;
+            right: 10px;
+        }
+        .msginput{
+             width: 100%;
+             padding: 10px;
+             font-size: large;
+             font-weight: bold;
+             border-radius: 10px;
+        }
+        .position{
+            position: absolute;
+            right: 10px;
+            top: 365px;
+          
+        }
+        .forflex1{
+            display: flex;
+        }
+        .flex1{
+             flex: 10; 
+        }
+        button{
+            width: 100%;
+            padding: 10px;
+            font-size: large;
+            font-weight: bold;
+            color: white;
+            background-color: black;
+        }
+        .forflex2{
+            display: flex;
+        }
+        .flex2{
+            flex: 9;
+        }
+        .forflex3{
+            display: flex;
+        }
+        .flex3{
+            flex: 7;
+        }
+        #screen{
+            /* border: 2px solid black; */
+            height: 308px;
+            text-align: right;
+            font-size: large;
+            font-weight: bolder;
+            padding-right: 20px;
+            background-attachment: fixed;
+            padding-top: 270px;
+            overflow-y: auto;
+            background-color: rgb(149, 184, 184);
+          
+        }
+        .spacebtn{
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>REAL TIME CHAT BOARD:</h1>
+    <div class="maindiv">
+      
+        <div class="name">
+           <a title="ViewProfile" href="#"><img src="img_avatar1.png" width="40" alt=""></a>
+            <span>unknown</span>
+
+
+            <a title="VideoCall" href="#"> <img class="videocall" src="10-105240_video-whatsapp-whatsapp-video-call-icon.png" width="40" height="40" alt=""></a>
+
+
+           <a title="VoiceCall" href="tel:+"><img class="callingimg" src="calling_image.png" width="45" height="40" alt=""></a>
+        </div>
+
+        <div id="screen">
+
+        </div>
+
+        <input readonly id="target"  class="msginput" placeholder="Message" type="text">
+
+      <img onclick="sentmsg()"  class="position" src="message-send-icon-png.png" width="30" alt="">
+
+
+        <script>
+            function sentmsg(){
+                let x = document.getElementById("target").value;
+                document.getElementById("screen").innerHTML = (x);
+            }
+        </script>
+
+
+        <div class="forflex1">
+            <div class="flex1">
+                <button onclick="one()" type="button">Q</button>
+            </div>
+            <div class="flex1">
+                <button onclick="two()" type="button">W</button>
+            </div>
+            <div class="flex1">
+                <button onclick="three()" type="button">E</button>
+            </div>
+            <div class="flex1">
+                <button onclick="four()" type="button">R</button>
+            </div>
+            <div class="flex1">
+                <button onclick="five()" type="button">T</button>
+            </div>
+            <div class="flex1">
+                <button onclick="six()" type="button">Y</button>
+            </div>
+            <div class="flex1">
+                <button onclick="seven()" type="button">U</button>
+            </div>
+            <div class="flex1">
+                <button onclick="eight()" type="button">I</button>
+            </div>
+            <div class="flex1">
+                <button onclick="nine()" type="button">O</button>
+            </div>
+            <div class="flex1">
+                <button onclick="ten()" type="button">P</button>
+            </div>
+        </div>
+
+        <script>
+            function one(){
+                document.getElementById("target").value += "q";
+            }
+            function two(){
+                document.getElementById("target").value += "w";
+            }
+            function three(){
+                document.getElementById("target").value += "e";
+            }
+            function four(){
+                document.getElementById("target").value += "r";
+            }
+            function five(){
+                document.getElementById("target").value += "t";
+            }
+            function six(){
+                document.getElementById("target").value += "y";
+            }
+            function seven(){
+                document.getElementById("target").value += "u";
+            }
+            function eight(){
+                document.getElementById("target").value += "i";
+            }
+            function nine(){
+                document.getElementById("target").value += "o";
+            }
+            function ten(){
+                document.getElementById("target").value += "p";
+            }
+        </script>
+
+        <div class="forflex2">
+            <div class="flex2">
+                <button onclick="eleven()" type="button">A</button>
+            </div>
+            <div class="flex2">
+                <button onclick="thirteen()" type="button">S</button>
+            </div>
+            <div class="flex2">
+                <button onclick="fourteen()" type="button">D</button>
+            </div>
+            <div class="flex2">
+                <button onclick="sixteen()" type="button">F</button>
+            </div>
+            <div class="flex2">
+                <button onclick="seventeen()" type="button">G</button>
+            </div>
+            <div class="flex2">
+                <button onclick="eighteen()" type="button">H</button>
+            </div>
+            <div class="flex2">
+                <button onclick="nineteen()" type="button">J</button>
+            </div>
+            <div class="flex2">
+                <button onclick="twenty()" type="button">K</button>
+            </div>
+            <div class="flex2">
+                <button onclick="twentyone()" type="button">L</button>
+            </div>
+        </div>
+
+
+        <script>
+            function eleven(){
+                document.getElementById("target").value += "a";
+            }
+            function thirteen(){
+                document.getElementById("target").value += "s";
+            }
+            function fourteen(){
+                document.getElementById("target").value += "d";
+            }
+            function sixteen(){
+                document.getElementById("target").value += "f";
+            }
+            function seventeen(){
+                document.getElementById("target").value += "g";
+            }
+            function eighteen(){
+                document.getElementById("target").value += "h";
+            }
+            function nineteen(){
+                document.getElementById("target").value += "j";
+            }
+            function twenty(){
+                document.getElementById("target").value += "k";
+            }
+            function twentyone(){
+                document.getElementById("target").value += "l";
+            }
+        </script>
+
+        
+        <div class="forflex3">
+            <div class="flex3">
+                <button onclick="twentytwo()" type="button">Z</button>
+            </div>
+            <div class="flex3">
+                <button onclick="twentythree()"  type="button">X</button>
+            </div>
+            <div class="flex3">
+                <button onclick="twentyfour()"  type="button">C</button>
+            </div>
+            <div class="flex3">
+                <button onclick="twentyfive()"  type="button">V</button>
+            </div>
+            <div class="flex3">
+                <button onclick="twentysix()"  type="button">B</button>
+            </div>
+            <div class="flex3">
+                <button onclick="twentyseven()"  type="button">N</button>
+            </div>
+            <div class="flex3">
+                <button onclick="twentyeight()"  type="button">M</button>
+            </div>
+        </div>
+
+        <script>
+             function twentytwo(){
+                document.getElementById("target").value += "z";
+            }
+            function twentythree(){
+                document.getElementById("target").value += "x";
+            }
+            function twentyfour(){
+                document.getElementById("target").value += "c";
+            }
+            function twentyfive(){
+                document.getElementById("target").value += "v";
+            }
+            function twentysix(){
+                document.getElementById("target").value += "b";
+            }
+            function twentyseven(){
+                document.getElementById("target").value += "n";
+            }
+            function twentyeight(){
+                document.getElementById("target").value += "m";
+            }
+        </script>
+
+        <button class="spacebtn" onclick="space()" type="button">Space</button>
+
+        <script>
+          
+        </script>
+      
+      
+    </div>
+</body>
+</html>
